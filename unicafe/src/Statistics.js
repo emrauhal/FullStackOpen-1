@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Statistic from './Statistic';
 import './index.css';
 
 class Statistics extends Component {
@@ -15,9 +16,7 @@ class Statistics extends Component {
             return (
                 <div>
                     <h2>Statistiikka:</h2>
-                    <p>hyvä: {hyva}</p>
-                    <p>neutraali: {neutraali}</p>
-                    <p>huono: {huono}</p>
+                    <p>ei annettuja palautteita</p>
                 </div>    
             )
         }
@@ -25,12 +24,14 @@ class Statistics extends Component {
         return (
             <div>
                 <h2>Statistiikka:</h2>
-                <p>hyvä: {hyva}</p>
-                <p>neutraali: {neutraali}</p>
-                <p>huono: {huono}</p>
+                <Statistic nimi='hyvä' arvo={hyva} />
+                <Statistic nimi='neutraali' arvo={neutraali} />
+                <Statistic nimi='huono' arvo={huono} />
                 <p> ------------------------- </p>
-                <p>keskiarvo: {parseFloat(keskiarvo).toFixed(1)}</p>
-                <p>positiivisia: {parseFloat(positiivisia).toFixed(1)} %</p>
+                <Statistic nimi='keskiarvo' 
+                    arvo={parseFloat(keskiarvo).toFixed(1)} />
+                <Statistic nimi='positiivisia' 
+                    arvo={parseFloat(positiivisia).toFixed(1)}/>
             </div>
         )
     }
