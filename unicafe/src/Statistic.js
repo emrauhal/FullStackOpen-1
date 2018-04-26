@@ -5,12 +5,18 @@ class Statistic extends Component {
     render() {
         if (this.props.nimi === 'positiivisia') {
             return (
-                <p>{this.props.nimi}: {this.props.arvo} %</p>
+                <tr>
+                    <td>{this.props.nimi}</td>
+                    <td>{this.props.arvo} %</td>
+                </tr>
             )
         }
-        
+
         return (
-            <p>{this.props.nimi}: {this.props.arvo}</p>
+            <tr>
+                <td>{this.props.nimi}</td>
+                <td>{this.props.arvo}</td>
+            </tr>
         )
     }
 }

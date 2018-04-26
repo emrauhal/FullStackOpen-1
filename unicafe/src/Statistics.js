@@ -5,6 +5,7 @@ import './index.css';
 class Statistics extends Component {
 
     render() {
+
         const hyva = this.props.data.hyva;
         const neutraali = this.props.data.neutraali;
         const huono = this.props.data.huono;
@@ -24,14 +25,15 @@ class Statistics extends Component {
         return (
             <div>
                 <h2>Statistiikka:</h2>
-                <Statistic nimi='hyvä' arvo={hyva} />
-                <Statistic nimi='neutraali' arvo={neutraali} />
-                <Statistic nimi='huono' arvo={huono} />
-                <p> ------------------------- </p>
-                <Statistic nimi='keskiarvo' 
-                    arvo={parseFloat(keskiarvo).toFixed(1)} />
-                <Statistic nimi='positiivisia' 
-                    arvo={parseFloat(positiivisia).toFixed(1)}/>
+                <table>
+                    <tbody>
+                        <Statistic nimi='hyvä' arvo={hyva} />
+                        <Statistic nimi='neutraali' arvo={neutraali} />
+                        <Statistic nimi='huono' arvo={huono} />
+                        <Statistic nimi='keskiarvo' arvo={parseFloat(keskiarvo).toFixed(1)} />
+                        <Statistic nimi='positiivisia' arvo={parseFloat(positiivisia).toFixed(1)}/>
+                    </tbody>
+                </table>
             </div>
         )
     }
