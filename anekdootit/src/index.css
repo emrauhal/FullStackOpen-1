@@ -1,0 +1,12 @@
+body {
+  margin: 3cm;
+  padding: 1cm;
+  border-style: solid;
+  border-width: thin;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input {
+  margin: 3px;
+}
